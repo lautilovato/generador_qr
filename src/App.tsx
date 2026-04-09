@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>🎯 Generador de Códigos QR</h1>
+        <h1>💻 Generador de Códigos QR</h1>
         <p>Crea y descarga códigos QR fácilmente</p>
       </header>
 
@@ -27,10 +27,11 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>© 2026 Generador QR | Hecho con React + TypeScript</p>
+        <p>Desarrollado por Lautaro Lovato | Construido con React & TS</p>
       </footer>
     </div>
   )
 }
 
 export default App
+

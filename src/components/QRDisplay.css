@@ -6,7 +6,7 @@
   background: white;
   padding: 32px;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   animation: slideIn 0.3s ease-out;
 }
 
@@ -17,7 +17,7 @@
   padding: 16px;
   background: white;
   border-radius: 12px;
-  border: 2px solid #f0f0f0;
+  border: 2px solid #E8F4F8;
 }
 
 .qr-wrapper svg {
@@ -45,13 +45,13 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #B3EBF2 0%, #FFEE8C 100%);
+  color: #333;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 16px rgba(179, 235, 242, 0.3);
 }
 
 .btn-primary:active {
@@ -59,18 +59,18 @@
 }
 
 .btn-secondary {
-  background: #f0f0f0;
+  background: #F0FAFB;
   color: #333;
-  border: 2px solid #ddd;
+  border: 2px solid #E8F4F8;
 }
 
 .btn-secondary:hover {
-  background: #e8e8e8;
-  border-color: #667eea;
+  background: #E8F4F8;
+  border-color: #B3EBF2;
 }
 
 .btn-secondary:active {
-  background: #ddd;
+  background: #D8ECEF;
 }
 
 .qr-value-hint {
@@ -90,7 +90,7 @@
   background: white;
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .qr-display-empty p {
