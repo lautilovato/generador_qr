@@ -10,6 +10,35 @@
   color: #333;
 }
 
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.qr-input {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 2px solid #E8F4F8;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.qr-input:focus {
+  outline: none;
+  border-color: #B3EBF2;
+  box-shadow: 0 0 0 3px rgba(179, 235, 242, 0.2);
+}
+
+.qr-input::placeholder {
+  color: #bbb;
+}
+
 .qr-input-field {
   width: 100%;
   padding: 12px 16px;
@@ -17,7 +46,10 @@
   border-radius: 8px;
   font-size: 16px;
   font-family: inherit;
+  background-color: #fff;
+  color: #000;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .qr-input-field:focus {
@@ -30,15 +62,108 @@
   color: #bbb;
 }
 
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  color: #B3EBF2;
+  transform: scale(1.2);
+}
+
 .qr-input-hint {
   font-size: 12px;
   color: #999;
   margin: 4px 0 0 0;
 }
 
+/* Tablets y arriba */
+@media (max-width: 1024px) {
+  .qr-input {
+    font-size: 15px;
+  }
+
+  .qr-input-label {
+    font-size: 13px;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
+  .qr-input,
   .qr-input-field {
-    padding: 10px 12px;
+    padding: 11px 36px 11px 14px;
     font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .qr-input-label {
+    font-size: 13px;
+  }
+
+  .clear-btn {
+    font-size: 16px;
+    right: 10px;
+    padding: 3px 6px;
+  }
+
+  .qr-input-hint {
+    font-size: 11px;
+    margin: 3px 0 0 0;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .qr-input,
+  .qr-input-field {
+    padding: 10px 32px 10px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .qr-input-label {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .clear-btn {
+    font-size: 14px;
+    right: 8px;
+    padding: 2px 5px;
+  }
+
+  .qr-input-hint {
+    font-size: 10px;
+    margin: 2px 0 0 0;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+  .qr-input,
+  .qr-input-field {
+    padding: 9px 28px 9px 10px;
+    font-size: 13px;
+  }
+
+  .qr-input-label {
+    font-size: 11px;
+  }
+
+  .clear-btn {
+    font-size: 13px;
+  }
+
+  .qr-input-hint {
+    font-size: 9px;
   }
 }
