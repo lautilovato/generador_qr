@@ -9,6 +9,8 @@ interface QRDisplayProps {
 
 export function QRDisplay({ value, size = 256 }: QRDisplayProps) {
   const qrRef = React.useRef<HTMLDivElement>(null)
+  const [showCopyMessage, setShowCopyMessage] = React.useState(false)
+
 
   const handleDownload = () => {
     const svg = qrRef.current?.querySelector('svg')
@@ -53,7 +55,8 @@ export function QRDisplay({ value, size = 256 }: QRDisplayProps) {
             navigator.clipboard.write([
               new ClipboardItem({ 'image/png': blob }),
             ])
-            alert('¡Código QR copiado al portapapeles!')
+            setShowCopyMessage(true)
+            setTimeout(() => setShowCopyMessage(false), 3000)
           }
         })
         URL.revokeObjectURL(url)
@@ -88,6 +91,11 @@ export function QRDisplay({ value, size = 256 }: QRDisplayProps) {
           📋 Copiar
         </button>
       </div>
+      {showCopyMessage && (
+        <p style={{ color: '#10b981', fontWeight: 'bold', margin: '10px 0' }}>
+          ✨ ¡Código QR copiado al portapapeles!
+        </p>
+      )}
       <p className="qr-value-hint">Contenido: {value}</p>
     </div>
   )
